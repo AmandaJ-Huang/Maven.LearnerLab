@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People {
+public class People<E> implements Iterable<E> {
     private List<Person> personList;
 
     public People() {
@@ -58,4 +58,18 @@ public class People {
     }
 
 
+    @Override
+    public Iterator<E> iterator() {
+        return new Iterator<E>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public E next() {
+                return null;
+            }
+        };
+    }
 }
