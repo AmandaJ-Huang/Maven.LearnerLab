@@ -19,7 +19,7 @@ public class People<E> implements Iterable<E> {
         this.personList.add(person);
     }
 
-    public Person findById (long id) {
+    public Person findById(long id) {
         for(Person person : personList) {
             if (person.getId() == id) {
                 return person;
