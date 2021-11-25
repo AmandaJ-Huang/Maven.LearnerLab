@@ -4,7 +4,11 @@ public class Student extends Person implements Learner{
     private double totalStudyTime;
 
     public Student() {
-        super(0, "");
+        this(0L, "");
+    }
+
+    public Student(long id, String name) {
+        super(id, name);
     }
 
     @Override

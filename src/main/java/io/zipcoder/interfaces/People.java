@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<E> implements Iterable<E> {
-    private List<Person> personList;
+public class People<E extends Person> implements Iterable<E> {
+    private final List<Person> personList;
 
     public People() {
         this(new ArrayList<>());
@@ -60,16 +60,6 @@ public class People<E> implements Iterable<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return new Iterator<E>() {
-            @Override
-            public boolean hasNext() {
-                return false;
-            }
-
-            @Override
-            public E next() {
-                return null;
-            }
-        };
+        return (Iterator<E>) personList.iterator();
     }
 }
