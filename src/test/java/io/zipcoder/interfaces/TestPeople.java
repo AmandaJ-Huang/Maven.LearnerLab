@@ -31,14 +31,10 @@ public class TestPeople {
     public void testRemoveByPerson() {
         // Given
         People people = Instructors.getInstance();
-        long id = 123;
-        String name = "Elaine";
-        Person elaine = new Person(id, name);
-        Integer expected = 0;
+        Integer expected = 2;
 
         // When
-        people.add(elaine);
-        people.remove(elaine);
+        people.remove(people.toArray()[0]);
         Integer actual = people.count();
 
         // Then
@@ -49,14 +45,11 @@ public class TestPeople {
     public void testRemoveByID() {
         // Given
         People people = Instructors.getInstance();
-        long id = 123;
-        String name = "Elaine";
-        Person elaine = new Person(id, name);
-        Integer expected = 0;
+        Integer expected = 3; //because I added Jerry, George and Elaine in testAdd()
 
         // When
-        people.add(elaine);
-        people.remove(id);
+        people.remove(1L);
+        people.remove(2L);
         Integer actual = people.count();
 
         // Then

@@ -35,7 +35,7 @@ public abstract class People<E extends Person> implements Iterable<E> {
 
     public void remove(long id) {
         this.personList.removeIf(
-                person -> person.getId() == id);
+                person -> person.getId().equals(id));
     }
 
     public void removeAll() {
