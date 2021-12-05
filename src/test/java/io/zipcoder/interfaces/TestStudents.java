@@ -24,10 +24,12 @@ public class TestStudents {
     public void testStudentsToArray() {
         // Given
         Students students = Students.getInstance();
+        String expected = "[Paul, David, Cay, John, Carnell, Jacob, Rogelio, Keerthana, Mike, Tra]";
 
         // When
-        System.out.println(Arrays.toString(students.toArray()));
+        String actual = Arrays.asList(students.toArray()).toString();
 
         // Then
+        Assert.assertEquals(expected, actual);
     }
 }
