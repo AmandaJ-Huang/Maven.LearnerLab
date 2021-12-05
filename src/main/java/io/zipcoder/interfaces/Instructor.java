@@ -22,4 +22,8 @@ public class Instructor extends Person implements Teacher{
             learner.learn(numberOfHoursPerLearner);
         }
     }
+
+    public String toString() {
+        return this.getName();
+    }
 }
