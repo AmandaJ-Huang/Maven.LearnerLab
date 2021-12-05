@@ -17,7 +17,7 @@ public class TestZipCodeWilmington {
 
         // When
         zipCodeWilmington.hostLecture(1L, lectureHours);
-        Map<Student, Double> map = zipCodeWilmington.getStudyMap();
+        Map<Learner, Double> map = zipCodeWilmington.getStudyMap();
         Double actual = map.get(students.findById(101L));
 
         // Then

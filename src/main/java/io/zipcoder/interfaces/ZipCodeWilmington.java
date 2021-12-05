@@ -23,12 +23,12 @@ public class ZipCodeWilmington {
         instructor.lecture(learners, numberOfHours);
     }
 
-    public Map<Student, Double> getStudyMap() {
+    public Map<Learner, Double> getStudyMap() {
         Learner[] learners = students.toArray();
-        Map<Student, Double> studyMap = new HashMap<>();
+        Map<Learner, Double> studyMap = new HashMap<>();
 
         for (Learner l : learners) {
-            studyMap.put((Student) l, l.getTotalStudyTime());
+            studyMap.put(l, l.getTotalStudyTime());
         }
 
         return studyMap;
