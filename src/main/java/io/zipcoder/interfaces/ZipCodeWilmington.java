@@ -13,14 +13,12 @@ public class ZipCodeWilmington {
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        Learner[] learners = students.toArray();
-        teacher.lecture(learners, numberOfHours);
+        teacher = Educator.valueOf(teacher.toString());
+        teacher.lecture(students.toArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours) {
-        Instructor instructor = instructors.findById(id);
-        Learner[] learners = students.toArray();
-        instructor.lecture(learners, numberOfHours);
+        instructors.findById(id).lecture(students.toArray(), numberOfHours);
     }
 
     public Map<Learner, Double> getStudyMap() {

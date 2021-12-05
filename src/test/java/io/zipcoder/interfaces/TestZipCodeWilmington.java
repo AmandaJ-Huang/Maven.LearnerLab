@@ -12,7 +12,7 @@ public class TestZipCodeWilmington {
         // Given
         ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
         Students students = Students.getInstance();
-        Double expected = 10.0;
+        Double expected = 20.0;
         Double lectureHours = 100.0;
 
         // When

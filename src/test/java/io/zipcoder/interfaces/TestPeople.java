@@ -34,7 +34,7 @@ public class TestPeople {
         Integer expected = 2;
 
         // When
-        people.remove(people.toArray()[0]);
+        people.remove(people.findById(2));
         Integer actual = people.count();
 
         // Then
@@ -48,8 +48,8 @@ public class TestPeople {
         Integer expected = 3; //because I added Jerry, George and Elaine in testAdd()
 
         // When
-        people.remove(1L);
-        people.remove(2L);
+        people.remove(3);
+        people.remove(4);
         Integer actual = people.count();
 
         // Then
