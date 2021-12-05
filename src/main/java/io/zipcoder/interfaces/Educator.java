@@ -27,7 +27,7 @@ public enum Educator implements Teacher {
     }
 
     public void setTimeWorked(Double timeWorked) {
-        this.timeWorked += timeWorked;
+        this.timeWorked = timeWorked;
     }
 
     public Double getTimeWorked() {
