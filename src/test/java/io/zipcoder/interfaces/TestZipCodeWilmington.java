@@ -23,4 +23,21 @@ public class TestZipCodeWilmington {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testHostLectureEducators() {
+        // Given
+        ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
+        Students students = Students.getInstance();
+        Double expected = 10.0;
+        Double lectureHours = 100.0;
+
+        // When
+        zipCodeWilmington.hostLecture(Educator.LEON, lectureHours);
+        Map<Learner, Double> map = zipCodeWilmington.getStudyMap();
+        Double actual = map.get(students.findById(101L));
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }
