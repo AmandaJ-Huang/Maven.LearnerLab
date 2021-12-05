@@ -3,6 +3,8 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class TestStudents {
 
     @Test
@@ -16,5 +18,16 @@ public class TestStudents {
 
         // Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testStudentsToArray() {
+        // Given
+        Students students = Students.getInstance();
+
+        // When
+        System.out.println(Arrays.toString(students.toArray()));
+
+        // Then
     }
 }

@@ -12,4 +12,9 @@ public class Instructors extends People<Instructor> {
     public static Instructors getInstance() {
         return INSTANCE;
     }
+
+    @Override
+    public Instructor[] toArray() {
+        return new Instructor[0];
+    }
 }

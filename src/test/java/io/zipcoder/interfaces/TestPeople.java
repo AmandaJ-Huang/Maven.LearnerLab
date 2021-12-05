@@ -8,7 +8,7 @@ public class TestPeople {
     @Test
     public void testAdd() {
         // Given
-        People people = new People();
+        People people = Instructors.getInstance();
         Person jerry = new Person(2, "Jerry");
         Person elaine = new Person(3, "Elaine");
         Person george = new Person(4, "George");
@@ -30,7 +30,7 @@ public class TestPeople {
     @Test
     public void testRemoveByPerson() {
         // Given
-        People people = new People();
+        People people = Instructors.getInstance();
         long id = 123;
         String name = "Elaine";
         Person elaine = new Person(id, name);
@@ -48,7 +48,7 @@ public class TestPeople {
     @Test
     public void testRemoveByID() {
         // Given
-        People people = new People();
+        People people = Instructors.getInstance();
         long id = 123;
         String name = "Elaine";
         Person elaine = new Person(id, name);
@@ -67,7 +67,7 @@ public class TestPeople {
     @Test
     public void testFindById() {
         // Given
-        People people = new People();
+        People people = Instructors.getInstance();
         long id = 123;
         String name = "Elaine";
         Person elaine = new Person(id, name);

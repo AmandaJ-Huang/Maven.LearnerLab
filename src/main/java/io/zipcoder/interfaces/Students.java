@@ -20,9 +20,9 @@ public class Students extends People<Student> {
         return INSTANCE;
     }
 
+
     @Override
     public Student[] toArray() {
-        return new Student[0];
+        return this.personList.toArray(new Student[0]);
     }
-
 }

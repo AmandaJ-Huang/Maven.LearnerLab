@@ -20,4 +20,8 @@ public class Student extends Person implements Learner{
     public Double getTotalStudyTime() {
         return this.totalStudyTime;
     }
+
+    public String toString(){
+        return this.getName();
+    }
 }
